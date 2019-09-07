@@ -8,6 +8,9 @@ namespace Heroes.GameEngine.Abstracts
 {
     public abstract class MapObject
     {
-        public static char Symbol { get; set; }
+        public char Symbol { get; set; }
+        public float SpeedBuff { get; set; }
+
+        public abstract MapObject GetInstatiate();
     }
 }
