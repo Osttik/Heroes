@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameEngine\Abstracts\MercObjects.cs" />
+    <Compile Include="GameEngine\Implementations\Forest.cs" />
+    <Compile Include="GameEngine\Implementations\Ground.cs" />
+    <Compile Include="GameEngine\Implementations\Rock.cs" />
+    <Compile Include="GameEngine\Implementations\Water.cs" />
     <Compile Include="Helpers\Implementations\StandartDefines.cs" />
     <Compile Include="Objects\Abstractions\Hero.cs" />
     <Compile Include="Objects\Enums\ItemsTypes.cs" />
@@ -62,7 +67,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GameEngine\Implementations\" />
     <Folder Include="GameEngine\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
