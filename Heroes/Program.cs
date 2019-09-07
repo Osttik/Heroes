@@ -9,13 +9,9 @@ namespace Heroes
 {
     class Program
     {
-        public static string name;
 
         static void Main(string[] args)
         {
-            name = "22222";
-
-            int a = 2;
             StandartDefines.Save();
         }
     }
