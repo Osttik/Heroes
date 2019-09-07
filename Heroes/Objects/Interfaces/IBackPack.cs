@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.Objects.Interfaces
 {
-    interface IBackPack
+    public interface IBackPack
     {
     }
 }

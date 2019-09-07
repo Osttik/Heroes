@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.Objects.Interfaces
 {
-    interface IItem
+    public interface IItem
     {
         IDescription Description { get; set; }
         List<IEffect> Effects { get; set; }

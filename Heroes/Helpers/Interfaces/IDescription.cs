@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.Helpers.Interfaces
 {
-    interface IDescription
+    public interface IDescription
     {
     }
 }

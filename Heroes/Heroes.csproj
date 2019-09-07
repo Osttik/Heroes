@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Implementations\StandartDefines.cs" />
+    <Compile Include="Objects\Abstractions\Hero.cs" />
     <Compile Include="Objects\Enums\ItemsTypes.cs" />
+    <Compile Include="Objects\Implementations\Attributes.cs" />
+    <Compile Include="Objects\Implementations\Defines.cs" />
+    <Compile Include="Objects\Implementations\Player.cs" />
+    <Compile Include="Objects\Implementations\Stats.cs" />
     <Compile Include="Objects\Interfaces\IBackPack.cs" />
     <Compile Include="Helpers\Interfaces\IDescription.cs" />
     <Compile Include="Objects\Interfaces\IEffect.cs" />
-    <Compile Include="Objects\Interfaces\IHero.cs" />
     <Compile Include="Objects\Interfaces\IItem.cs" />
     <Compile Include="Objects\Interfaces\IUnit.cs" />
     <Compile Include="Program.cs" />
@@ -59,8 +64,6 @@
   <ItemGroup>
     <Folder Include="GameEngine\Implementations\" />
     <Folder Include="GameEngine\Interfaces\" />
-    <Folder Include="Helpers\Implementations\" />
-    <Folder Include="Objects\Implementations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
