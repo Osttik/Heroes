@@ -8,5 +8,6 @@ namespace Heroes.Objects.Interfaces
 {
     public interface IBackPack
     {
+        List<IItem> Items { get; set; }
     }
 }
