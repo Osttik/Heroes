@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Implementations
 {
-    public class Ground : MercObjects
+    public class Ground : MapObject
     {
         static Ground()
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Implementations
 {
-    public class Forest : MercObjects
+    public class Forest : MapObject
     {
         static Forest()
         {

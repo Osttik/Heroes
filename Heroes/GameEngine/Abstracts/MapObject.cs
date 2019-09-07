@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Abstracts
 {
-    public abstract class MercObjects
+    public abstract class MapObject
     {
         public static char Symbol { get; set; }
     }

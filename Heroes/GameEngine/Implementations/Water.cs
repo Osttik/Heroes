@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Implementations
 {
-    public class Water : MercObjects
+    public class Water : MapObject
     {
         static Water()
         {
