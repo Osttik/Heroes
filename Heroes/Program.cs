@@ -12,7 +12,10 @@ namespace Heroes
 
         static void Main(string[] args)
         {
-            StandartDefines.Save();
+            if (true)
+            {
+                StandartDefines.Save();
+            }
         }
     }
 }
