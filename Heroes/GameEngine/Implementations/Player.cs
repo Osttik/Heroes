@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Implementations
 {
-    public class Player
+    public class PlayerObject
     {
         public readonly char Symbol;
         public readonly Position Position;
         public string CurrentMap { get; set; }
 
-        public Player()
+        public PlayerObject()
         {
             Symbol = 'P';
             Position = new Position();
             CurrentMap = "Zero";
         }
 
-        public Player(int x, int y) : this()
+        public PlayerObject(int x, int y) : this()
         {
             Position.XPosition = x;
             Position.YPosition = y;
         }
 
-        public Player(char symbol, int x, int y) : this(x, y)
+        public PlayerObject(char symbol, int x, int y) : this(x, y)
         {
             Symbol = symbol;
         }

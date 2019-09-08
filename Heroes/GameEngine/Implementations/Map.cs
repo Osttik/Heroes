@@ -40,15 +40,15 @@ namespace Heroes.GameEngine.Implementations
         {
             switch (symbol)
             {
-                case '&':
+                case '~':
                     return Water.Instatiate;
-                case '/':
+                case '▲':
                     return Mountain.Instatiate;
                 case '#':
                     return Road.Instatiate;
-                case '@':
-                    return Ground.Instatiate;
                 case '^':
+                    return Ground.Instatiate;
+                case '&':
                     return Forest.Instatiate;
 
                 case '☎':
