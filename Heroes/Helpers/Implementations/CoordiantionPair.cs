@@ -18,7 +18,7 @@ namespace Heroes.Helpers.Implementations
             get => _x;
             set
             {
-                if (value >= 0 && value <= _maxX)
+                if (value >= 0 && value < _maxX)
                 {
                     _x = value;
                 }
@@ -30,7 +30,7 @@ namespace Heroes.Helpers.Implementations
             get => _y;
             set
             {
-                if (value >= 0 && value <= _maxY)
+                if (value >= 0 && value < _maxY)
                 {
                     _y = value;
                 }
