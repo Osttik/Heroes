@@ -36,17 +36,14 @@ namespace Heroes
 
             Player player = new Player();
             player.MoveToMap("Test Map", 4, 15);
-
-            Task.Run(() =>
+            
+            while (true)
             {
-                while (true)
-                {
-                    player.StartControl();
-                    Console.Clear();
-                    MapDisplayController.Display(Maps.MapDictionary["Test Map"]);
-                    Thread.Sleep(70);
-                }
-            });
+                player.StartControl();
+                Console.Clear();
+                MapDisplayController.Display(Maps.MapDictionary["Test Map"]);
+                Thread.Sleep(70);
+            }
 
         }
 
