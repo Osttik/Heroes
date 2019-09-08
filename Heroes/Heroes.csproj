@@ -49,8 +49,11 @@
     <Compile Include="GameEngine\Implementations\MapObjects\Forest.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Ground.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Road.cs" />
-    <Compile Include="GameEngine\Implementations\MapObjects\Rock.cs" />
+    <Compile Include="GameEngine\Implementations\MapObjects\Mountain.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Water.cs" />
+    <Compile Include="GameEngine\Implementations\Maps.cs" />
+    <Compile Include="GameEngine\Implementations\Player.cs" />
+    <Compile Include="Helpers\Implementations\CoordiantionPair.cs" />
     <Compile Include="Helpers\Implementations\StandartDefines.cs" />
     <Compile Include="Objects\Abstractions\Hero.cs" />
     <Compile Include="Objects\Enums\ItemsTypes.cs" />

@@ -13,7 +13,7 @@ namespace Heroes.GameEngine.Implementations.MapObjects
 
         public Ground()
         {
-            Symbol = '@';
+            Symbol = '^';
             SpeedBuff = 1f;
         }
 

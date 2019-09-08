@@ -13,7 +13,7 @@ namespace Heroes.GameEngine.Implementations.MapObjects
 
         public Forest()
         {
-            Symbol = '^';
+            Symbol = '&';
             SpeedBuff = 0.5f;
         }
 

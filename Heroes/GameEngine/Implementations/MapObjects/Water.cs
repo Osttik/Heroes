@@ -13,7 +13,7 @@ namespace Heroes.GameEngine.Implementations.MapObjects
 
         public Water()
         {
-            Symbol = '&';
+            Symbol = '~';
             SpeedBuff = 1.5f;
         }
 

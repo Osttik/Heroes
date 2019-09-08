@@ -43,7 +43,7 @@ namespace Heroes.GameEngine.Implementations
                 case '&':
                     return Water.Instatiate;
                 case '/':
-                    return Rock.Instatiate;
+                    return Mountain.Instatiate;
                 case '#':
                     return Road.Instatiate;
                 case '@':

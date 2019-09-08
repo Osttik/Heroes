@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Heroes.GameEngine.Implementations.MapObjects
 {
-    public class Rock : MapObject
+    public class Mountain : MapObject
     {
-        public static Rock Instatiate;
+        public static Mountain Instatiate;
 
-        public Rock()
+        public Mountain()
         {
-            Symbol = '/';
+            Symbol = '▲';
             SpeedBuff = 0.3f;
         }
 
-        static Rock()
+        static Mountain()
         {
-            Instatiate = new Rock();
+            Instatiate = new Mountain();
         }
 
         public override MapObject GetInstatiate()
