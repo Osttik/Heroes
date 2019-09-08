@@ -22,5 +22,12 @@ namespace Heroes.GameEngine.Implementations
                 MapDictionary.Add(map.Key, map.Value);
             }
         }
+        public static void RemoveMaps(params KeyValuePair<string, Map>[] maps)
+        {
+            foreach (var map in maps)
+            {
+                MapDictionary.Remove(map.Key);
+            }
+        }
     }
 }

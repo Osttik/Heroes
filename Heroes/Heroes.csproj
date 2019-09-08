@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameEngine\Abstracts\MapGenerator.cs" />
     <Compile Include="GameEngine\Abstracts\MapObject.cs" />
     <Compile Include="GameEngine\Implementations\Controllers\KeyBoardController.cs" />
     <Compile Include="GameEngine\Implementations\Controllers\PositionController.cs" />
@@ -54,9 +57,12 @@
     <Compile Include="GameEngine\Implementations\MapObjects\Ground.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Road.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Mountain.cs" />
+    <Compile Include="GameEngine\Implementations\MapObjects\UnderGroundEntrance.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Water.cs" />
     <Compile Include="GameEngine\Implementations\Maps.cs" />
     <Compile Include="GameEngine\Implementations\PlayerObject.cs" />
+    <Compile Include="GameEngine\Implementations\UnderGroundMap.cs" />
+    <Compile Include="GameEngine\Interfaces\IGenerator.cs" />
     <Compile Include="Helpers\Implementations\CoordiantionPair.cs" />
     <Compile Include="Helpers\Implementations\StandartDefines.cs" />
     <Compile Include="Objects\Abstractions\Hero.cs" />
@@ -77,7 +83,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GameEngine\Interfaces\" />
+    <Folder Include="GameEngine\Implementations\UnderGroundMapObjects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
