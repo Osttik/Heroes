@@ -35,12 +35,22 @@ namespace Heroes.GameEngine.Implementations
 
         public void MoveToMap(string mapName, int x, int y)
         {
+            if (Maps.MapDictionary.Keys.Contains(CurrentMap))
+            {
+                Map prevMap = Maps.MapDictionary[CurrentMap];
+                prevMap.MapController.RemovePlayer(this);
+            }
+
             Map newMap = Maps.MapDictionary[mapName];
+
+            Position.SetMaxCoordinations(newMap.Heigth, newMap.Lenght);
 
             Position.XPosition = x;
             Position.YPosition = y;
 
-            Position.SetMaxCoordinations(newMap.Heigth, newMap.Lenght);
+            CurrentMap = mapName;
+
+            newMap.MapController.AddPlayer(this);
         }
 
     }

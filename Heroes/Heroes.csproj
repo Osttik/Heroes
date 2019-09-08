@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameEngine\Abstracts\MapObject.cs" />
+    <Compile Include="GameEngine\Implementations\Controllers\KeyBoardController.cs" />
+    <Compile Include="GameEngine\Implementations\Controllers\PositionController.cs" />
+    <Compile Include="GameEngine\Implementations\Controllers\MapController.cs" />
     <Compile Include="GameEngine\Implementations\Map.cs" />
+    <Compile Include="GameEngine\Implementations\Controllers\MapDisplayController.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\BadSymbol.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Forest.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Ground.cs" />
@@ -52,7 +56,7 @@
     <Compile Include="GameEngine\Implementations\MapObjects\Mountain.cs" />
     <Compile Include="GameEngine\Implementations\MapObjects\Water.cs" />
     <Compile Include="GameEngine\Implementations\Maps.cs" />
-    <Compile Include="GameEngine\Implementations\Player.cs" />
+    <Compile Include="GameEngine\Implementations\PlayerObject.cs" />
     <Compile Include="Helpers\Implementations\CoordiantionPair.cs" />
     <Compile Include="Helpers\Implementations\StandartDefines.cs" />
     <Compile Include="Objects\Abstractions\Hero.cs" />

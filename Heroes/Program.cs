@@ -7,6 +7,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Heroes.GameEngine.Implementations.MapObjects;
 using Heroes.GameEngine.Implementations;
+using Heroes.GameEngine.Implementations.Controllers;
+using Heroes.Objects.Implementations;
+using System.Threading;
 
 namespace Heroes
 {
@@ -21,10 +24,29 @@ namespace Heroes
                 StandartDefines.Save();
             }
 
-            Map map = new Map(File.ReadAllLines(@"C:\Users\Natalya\Desktop\Map.txt"));
+            Start();
 
-            Console.WriteLine(map.ToString());
             Console.Read();
         }
+
+        public static void Start()
+        {
+
+            Maps.AddMaps(new KeyValuePair<string, Map>("Test Map", new Map(File.ReadAllLines(@"C:\Users\Natalya\Desktop\Map.txt"))));
+
+            Player player = new Player();
+            player.MoveToMap("Test Map", 4, 15);
+
+            while (true)
+            {
+                player.StartControl();
+                Console.Clear();
+                MapDisplayController.Display(Maps.MapDictionary["Test Map"]);
+                Thread.Sleep(50);
+            }
+
+        }
+
+
     }
 }

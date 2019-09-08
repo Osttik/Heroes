@@ -20,6 +20,7 @@ namespace Heroes.Helpers.Implementations
         public static readonly float MinStrenght;
         #endregion Attributes
 
+        public static readonly string MapZero;
         public static readonly string DefinesPath;
         #endregion Public
 
@@ -36,6 +37,8 @@ namespace Heroes.Helpers.Implementations
             MinAgility = 1;
             MinInteligence = 1;
             MinStrenght = 1;
+
+            MapZero = "Zero";
 
             DefinesFile = "Defines.txt";
 
@@ -63,6 +66,7 @@ namespace Heroes.Helpers.Implementations
             definesStrings.Add("MinAgility = 1");
             definesStrings.Add("MinInteligence = 1");
             definesStrings.Add("MinStrenght = 1");
+            definesStrings.Add("MapZero = Zero");
 
             return definesStrings.ToArray();
         }

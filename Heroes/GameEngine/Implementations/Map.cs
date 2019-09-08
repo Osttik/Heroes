@@ -1,4 +1,5 @@
 ﻿using Heroes.GameEngine.Abstracts;
+using Heroes.GameEngine.Implementations.Controllers;
 using Heroes.GameEngine.Implementations.MapObjects;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,13 @@ namespace Heroes.GameEngine.Implementations
     {
         public int Heigth { get => _map.GetLength(0); }
         public int Lenght { get => _map.GetLength(1); }
+        public string Name { get; set; }
+        public MapController MapController { get; set; }
 
         private MapObject[,] _map;
 
         public Map(): this(64, 64)
         {
-
         }
 
         public Map(string[] stringsMap): this(stringsMap.Length, stringsMap[0].Length)
@@ -33,7 +35,14 @@ namespace Heroes.GameEngine.Implementations
 
         public Map(int h, int l)
         {
+            MapController = new MapController();
             _map = new MapObject[h, l];
+        }
+
+        public MapObject this [int i, int j]
+        {
+            get => _map[i, j];
+            set => _map[i, j] = value;
         }
 
         public MapObject GetObjectBySybol(char symbol)
