@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Heroes.Helpers.Implementations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,16 @@ namespace Heroes.Objects.Implementations
         public float Health { get; set; }
         public float Endurance { get; set; }
 
+        public Stats()
+        {
+            Attributes = new Attributes();
+        }
+
         public void RescaleStats()
         {
-
+            Mana = StandartDefines.MinMana + 50 * Attributes.Inteligence;
+            Health = StandartDefines.MinHealth + 20 * Attributes.Strenght;
+            Endurance = StandartDefines.MinEndurance + 10 * Attributes.Agility;
         }
     }
 }
