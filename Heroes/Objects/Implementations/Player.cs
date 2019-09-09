@@ -16,9 +16,11 @@ namespace Heroes.Objects.Implementations
         private KeyBoardController _controller;
 
         public IBackPack BackPack { get; set; }
+        public Stats Stats { get; private set; }
 
         public Player()
         {
+            Stats = new Stats();
             _playerObject = new PlayerObject();
             _controller = new KeyBoardController();
         }
