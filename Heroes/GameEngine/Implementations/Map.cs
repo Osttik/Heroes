@@ -59,7 +59,7 @@ namespace Heroes.GameEngine.Implementations
                     return Ground.Instatiate;
                 case '&':
                     return Forest.Instatiate;
-
+                    
                 case '☎':
                 default:
                     return BadSymbol.Instatiate;
