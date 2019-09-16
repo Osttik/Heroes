@@ -1,5 +1,6 @@
 ﻿using Heroes.GameEngine.Implementations;
 using Heroes.GameEngine.Implementations.Controllers;
+using Heroes.Helpers.Interfaces;
 using Heroes.Objects.Abstractions;
 using Heroes.Objects.Interfaces;
 using System;
@@ -17,6 +18,8 @@ namespace Heroes.Objects.Implementations
 
         public IBackPack BackPack { get; set; }
         public Stats Stats { get; private set; }
+        public IDescription Description { get; private set; }
+        public List<IEffect> Effects { get; private set; }
 
         public Player()
         {

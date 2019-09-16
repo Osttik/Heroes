@@ -8,5 +8,6 @@ namespace Heroes.Helpers.Interfaces
 {
     public interface IDescription
     {
+        string GetDescription();
     }
 }

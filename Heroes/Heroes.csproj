@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="GameEngine\Abstracts\MapGenerator.cs" />
     <Compile Include="GameEngine\Abstracts\MapObject.cs" />
+    <Compile Include="GameEngine\Implementations\Actions\StayAction.cs" />
+    <Compile Include="GameEngine\Implementations\Controllers\ActionController.cs" />
     <Compile Include="GameEngine\Implementations\Controllers\KeyBoardController.cs" />
     <Compile Include="GameEngine\Implementations\Controllers\PositionController.cs" />
     <Compile Include="GameEngine\Implementations\Controllers\MapController.cs" />
@@ -62,8 +64,12 @@
     <Compile Include="GameEngine\Implementations\Maps.cs" />
     <Compile Include="GameEngine\Implementations\PlayerObject.cs" />
     <Compile Include="GameEngine\Implementations\UnderGroundMap.cs" />
+    <Compile Include="GameEngine\Interfaces\IAction.cs" />
     <Compile Include="GameEngine\Interfaces\IGenerator.cs" />
     <Compile Include="Helpers\Implementations\CoordiantionPair.cs" />
+    <Compile Include="Helpers\Implementations\Descriptions\MapDescription.cs" />
+    <Compile Include="Helpers\Implementations\Displayer.cs" />
+    <Compile Include="Helpers\Implementations\Parser.cs" />
     <Compile Include="Helpers\Implementations\StandartDefines.cs" />
     <Compile Include="Objects\Abstractions\Hero.cs" />
     <Compile Include="Objects\Enums\ItemsTypes.cs" />

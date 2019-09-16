@@ -10,6 +10,7 @@ using Heroes.GameEngine.Implementations;
 using Heroes.GameEngine.Implementations.Controllers;
 using Heroes.Objects.Implementations;
 using System.Threading;
+using Heroes.Helpers.Implementations.Descriptions;
 
 namespace Heroes
 {
@@ -50,17 +51,24 @@ namespace Heroes
                 "^^^^^^^^^^^#^^^^^^^^^^^^^^^^^^^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             };
 
+            Console.CursorVisible = false;
 
             Maps.AddMaps(new KeyValuePair<string, Map>("Test Map", new Map(mapStrings)));
 
             Player player = new Player();
             player.MoveToMap("Test Map", 4, 15);
-            
+
+            MapDescription m = new MapDescription()
+            {
+                MapName = "Test wordl"
+            };
+            m.Add("228335");
+
             while (true)
             {
                 player.StartControl();
                 Console.SetCursorPosition(0, 0);
-                MapDisplayController.Display(Maps.MapDictionary["Test Map"]);
+                Displayer.Display(Maps.MapDictionary["Test Map"], m);
                 Thread.Sleep(70);
             }
 

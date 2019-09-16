@@ -22,6 +22,7 @@ namespace Heroes.Helpers.Implementations
 
         public static readonly string MapZero;
         public static readonly string DefinesPath;
+        public static readonly string WhiteString;
         #endregion Public
 
         #region Private
@@ -41,6 +42,7 @@ namespace Heroes.Helpers.Implementations
             MapZero = "Zero";
 
             DefinesFile = "Defines.txt";
+            WhiteString = "You was trying to get Unreal string";
 
             DefinesPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Heroes\" + DefinesFile;
         }
@@ -67,6 +69,7 @@ namespace Heroes.Helpers.Implementations
             definesStrings.Add("MinInteligence = 1");
             definesStrings.Add("MinStrenght = 1");
             definesStrings.Add("MapZero = Zero");
+            definesStrings.Add("WhiteString = You was trying to get Unreal string");
 
             return definesStrings.ToArray();
         }

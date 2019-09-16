@@ -9,7 +9,7 @@ namespace Heroes.GameEngine.Implementations.Controllers
 {
     public static class MapDisplayController
     {
-        public static void Display(Map map)
+        public static string GetDisplay(Map map)
         {
             string mapString = "";
             for (int i = 0; i < map.Heigth; i++)
@@ -29,7 +29,7 @@ namespace Heroes.GameEngine.Implementations.Controllers
                 mapString += '\n';
             }
 
-            Console.WriteLine(mapString);
+            return mapString;
         }
     }
 }
