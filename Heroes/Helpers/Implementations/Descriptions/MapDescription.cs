@@ -11,7 +11,8 @@ namespace Heroes.Helpers.Implementations.Descriptions
     public class MapDescription : IDescription, IEnumerable
     {
         public string MapName { get; set; }
-        
+        public string Description { get; set; }
+
         public int DescriptionLenght { get => _mapDescription.Count; }
 
         private List<string> _mapDescription { get; set; } = new List<string>();
@@ -42,13 +43,27 @@ namespace Heroes.Helpers.Implementations.Descriptions
                     _mapDescription[i] = value;
             }
         }
+
         public string GetDescription()
         {
-            string mainDescription = "";
-            mainDescription += GetLenghtLineToConsoleSize(_leftUpLine, _rightUpLine) + _end;
-            mainDescription += _lineBegin + MapName + "\"";
+            if (Description == null || Description.Length == 0)
+            {
+                string mainDescription = "";
+                mainDescription += GetLenghtLineToConsoleSize(_leftUpLine, _rightUpLine);
+                mainDescription += GetPretifyLine(_lineBegin, MapName, "\"");
 
-            return mainDescription;
+                string[] description = PretifyText(_mapDescription.ToArray());
+                foreach (var item in description)
+                {
+                    mainDescription += item;
+                }
+
+                mainDescription += GetLenghtLineToConsoleSize(_leftDownLine, _rightDownLine);
+
+                Description = mainDescription;
+                return mainDescription;
+            }
+            return Description;
         }
 
         private string GetLenghtLineToConsoleSize(char begin, char end)
@@ -66,19 +81,86 @@ namespace Heroes.Helpers.Implementations.Descriptions
         private string[] PretifyText(string[] text)
         {
             List<string> pretifyiedLines = new List<string>();
-            Queue<string> words = new Queue<string>();
+            List<string> words = new List<string>();
+
+            int currentWord = 0;
+            int currentLength = 0;
 
             while (true)
             {
 
+                if (currentLength + text[currentWord].Length + 3 < Console.WindowWidth)
+                {
+                    words.Add(text[currentWord]);
+                    currentLength += text[currentWord].Length + 1;
+                    currentWord++;
+                }
+                else
+                {
+                    if (currentLength == 0)
+                    {
+                        break;
+                    }
+                    pretifyiedLines.Add(GetPretifyLine(words.ToArray()));
+                    currentLength = 0;
+                    words.Clear();
+                }
+
+                if (currentWord >= text.Length)
+                {
+                    if (currentLength != 0)
+                    {
+                        pretifyiedLines.Add(GetPretifyLine(words.ToArray()));
+                    }
+
+                    break;
+                }
             }
 
             return pretifyiedLines.ToArray();
         }
 
-        public void Add(string line)
+        private string GetPretifyLine(params string[] lines)
         {
-            _mapDescription.Add(line);
+            string pretifiedLine = _heigthLine + "";
+
+            foreach (var item in lines)
+            {
+                pretifiedLine += " " + item;
+            }
+
+            pretifiedLine += GetLineFromCharacterToSize(" ", Console.WindowWidth - pretifiedLine.Length - 1);
+
+            pretifiedLine += _heigthLine;
+
+            return pretifiedLine;
+        }
+
+        private string GetLineFromCharacterToSize(string character, int size)
+        {
+            int counter = 0;
+            string characterLine = string.Empty;
+
+            while (counter < size)
+            {
+                for (int i = 0; i < character.Length; i++, counter++)
+                {
+                    if (counter >= size)
+                        break;
+
+                    characterLine += character[i];
+                }
+            }
+
+            return characterLine;
+        }
+
+        public void Add(params string[] lines)
+        {
+            foreach (var line in lines)
+            {
+                _mapDescription.Add(line);
+            }
         }
 
         public void Remove(int i)
