@@ -8,6 +8,7 @@ using GameEnviroment.Helpers.Implementations;
 using GameEnviroment.Implementations;
 using GameEnviroment.Helpers.Implementations.Descriptions;
 using Configurations;
+using UI;
 
 namespace Main
 {
@@ -28,6 +29,7 @@ namespace Main
 
         public static void Start()
         {
+            (new UIWindow()).Start();
             string[] mapStrings =
             {
                 "▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲~~~~~~~~~~~~~~~~~&&&&&&&&&&&&~~~~~~",
@@ -85,7 +87,7 @@ namespace Main
                     player.StartControl();
                     Console.SetCursorPosition(0, 0);
                     Displayer.Display(Maps.MapDictionary["Test Map"], m);
-                    Thread.Sleep(150);
+                    Thread.Sleep(1);
                 }
             });
             game.Start();

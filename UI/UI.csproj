@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="freeglut" Version="2.8.1.15" />
+    <PackageReference Include="Giawa.OpenGL" Version="0.2.0" />
+    <PackageReference Include="Giawa.OpenGL.Platform" Version="0.1.5" />
+    <PackageReference Include="OpenTK" Version="4.4.0" />
+    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
+    <PackageReference Include="sdl2" Version="2.0.5" />
+    <PackageReference Include="sdl2.nuget" Version="2.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UIComponents\Components\" />
+  </ItemGroup>
+
+</Project>

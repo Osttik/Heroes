@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
     <ProjectReference Include="..\GameEnviroment\GameEnviroment.csproj" />
+    <ProjectReference Include="..\UI\UI.csproj" />
   </ItemGroup>
 
 </Project>
